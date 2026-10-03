@@ -1,0 +1,50 @@
+{
+  "name": "ui-markup-a11y-check",
+  "version": "1.0.0",
+  "description": "Read built HTML pages (one file, several, or a folder) and report the accessibility problems that are visible in the markup: images with no alt, buttons, links and form fields with no name, no lang, no title, a viewport that blocks zoom, skipped heading levels, duplicate ids, aria references to missing ids, vague link text, a positive tabindex, autoplay media, focusable content inside aria-hidden and data tables with no headers. Each finding has its file, line and column and quotes the page it rests on. Never runs a script, no dependencies.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "ui-markup-a11y-check": "bin/ui-markup-a11y-check.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "docs",
+    "examples",
+    "research",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "test:coverage": "node --test --experimental-test-coverage \"test/*.test.js\"",
+    "check": "node tools/check.mjs",
+    "example": "node tools/example.mjs"
+  },
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "wcag",
+    "html",
+    "aria",
+    "ui-design",
+    "alt-text",
+    "forms",
+    "static-analysis",
+    "cli"
+  ],
+  "author": "INNERLUXES <info@innerluxes.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INNERLUXES/ui-markup-a11y-check.git"
+  },
+  "homepage": "https://innerluxes.dev/application/ui-design"
+}
