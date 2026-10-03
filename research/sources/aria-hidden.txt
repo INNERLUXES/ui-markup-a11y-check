@@ -1,0 +1,42 @@
+Source: https://www.w3.org/TR/wai-aria-1.2/#aria-hidden
+
+#### aria-hidden state
+
+Indicates whether the element is exposed to an accessibility API. See related aria-disabled.
+
+User agents determine an element's hidden status based on whether it is rendered, and the rendering is usually controlled by CSS. For example, an element whose display property is set to none is not rendered. An element is considered hidden if it, or any of its ancestors are not rendered or have their aria-hidden attribute value set to true.
+
+Authors MAY, with caution, use aria-hidden to hide visibly rendered content from assistive technologies only if the act of hiding this content is intended to improve the experience for users of assistive technologies by removing redundant or extraneous content. Authors using aria-hidden to hide visible content from screen readers MUST ensure that identical or equivalent meaning and functionality is exposed to assistive technologies.
+
+Note
+
+Authors are advised to use extreme caution and consider a wide range of disabilities when hiding visibly rendered content from assistive technologies. For example, a sighted, dexterity-impaired individual may use voice-controlled assistive technologies to access a visual interface. If an author hides visible link text "Go to checkout" and exposes similar, yet non-identical link text "Check out now" to the accessibility API, the user may be unable to access the interface they perceive using voice control. Similar problems may also arise for screen reader users. For example, a sighted telephone support technician may attempt to have the blind screen reader user click the "Go to checkout" link, which they may be unable to find using a type-ahead item search ("Go to...").
+
+Note
+
+At the time of this writing, aria-hidden="false" is known to work inconsistently in browsers. As future implementations improve, use caution and test thoroughly before relying on this approach.
+
+Characteristics:
+
+Characteristic
+Value
+
+Used in Roles:
+All elements of the base markup
+
+Value:
+true/false/undefined
+
+Values:
+
+Value
+Description
+
+false
+The element is exposed to the accessibility API as if it was rendered.
+
+true
+The element is hidden from the accessibility API.
+
+undefined (default)
+The element's hidden state is determined by the user agent based on whether it is rendered.

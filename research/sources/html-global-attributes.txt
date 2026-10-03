@@ -1,0 +1,41 @@
+Source: https://html.spec.whatwg.org/multipage/dom.html#global-attributes
+
+#### 3.2.6 Global attributes
+
+When specified on HTML elements, the id attribute
+value must be unique amongst all the IDs in the element's
+tree and must contain at least one character. The value must not contain any
+ASCII whitespace.
+
+The id attribute specifies its element's unique identifier (ID).
+
+There are no other restrictions on what form an ID can take; in particular, IDs can consist of
+just digits, start with a digit, start with an underscore, consist of just punctuation, etc.
+
+An element's unique identifier can be used for a variety of
+purposes, most notably as a way to link to specific parts of a document using fragments, as a way to target an element when scripting, and
+as a way to style a specific element from CSS.
+
+Identifiers are opaque strings. Particular meanings should not be derived from the value of the
+id attribute.
+
+##### 3.2.6.1 The title attribute
+
+The title attribute
+represents advisory information for the element, such as would be appropriate for a
+tooltip. On a link, this could be the title or a description of the target resource; on an image,
+it could be the image credit or a description of the image; on a paragraph, it could be a footnote
+or commentary on the text; on a citation, it could be further information about the source; on
+interactive content, it could be a label for, or instructions for, use of the
+element; and so forth. The value is text.
+
+Relying on the title attribute is currently
+discouraged as many user agents do not expose the attribute in an accessible manner as required by
+this specification (e.g., requiring a pointing device such as a mouse to cause a tooltip to
+appear, which excludes keyboard-only users and touch-only users, such as anyone with a modern
+phone or tablet).
+
+If this attribute is omitted from an element, then it implies that the title attribute of the nearest ancestor HTML element with a title attribute set is also
+relevant to this element. Setting the attribute overrides this, explicitly stating that the
+advisory information of any ancestors is not relevant to this element. Setting the attribute to
+the empty string indicates that the element has no advisory information.

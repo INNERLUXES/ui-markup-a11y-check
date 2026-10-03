@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ridge Runner trail shoe - Trailhead Outfitters</title>
+</head>
+<body>
+  <main>
+    <h1>Ridge Runner trail shoe</h1>
+    <img src="img/ridge-runner-red.jpg" width="480" height="320" alt="Ridge Runner trail shoe in red, side view">
+    <video src="media/ridge-runner.mp4" controls></video>
+    <h2>Sizes</h2>
+    <table>
+      <tr><th scope="col">Size</th><th scope="col">Foot length</th><th scope="col">In stock</th></tr>
+      <tr><td>40</td><td>25.5 cm</td><td>Yes</td></tr>
+      <tr><td>42</td><td>26.5 cm</td><td>No</td></tr>
+    </table>
+    <form action="/cart" method="post">
+      <label for="size">Size</label>
+      <select id="size" name="size">
+        <option>40</option>
+        <option>42</option>
+      </select>
+      <input type="image" src="img/add-to-cart.png" alt="Add to cart">
+      <button type="button" aria-label="Save to wish list"><span class="icon-heart"></span></button>
+    </form>
+    <div class="carousel-clone" aria-hidden="true">
+      <a href="product-blue.html" tabindex="-1">Ridge Runner in blue</a>
+    </div>
+  </main>
+</body>
+</html>

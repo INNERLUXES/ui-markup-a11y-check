@@ -1,0 +1,104 @@
+Source: https://html.spec.whatwg.org/multipage/images.html#alt
+
+##### 4.8.4.4 Requirements for providing text to act as an alternative for images
+
+###### 4.8.4.4.1 General guidelines
+
+Except where otherwise specified, the alt attribute must be
+specified and its value must not be empty; the value must be an appropriate replacement for the
+image. The specific requirements for the alt attribute depend on
+what the image is intended to represent, as described in the following sections.
+
+The most general rule to consider when writing alternative text is the following: the
+intent is that replacing every image with the text of its alt
+attribute does not change the meaning of the page.
+
+So, in general, alternative text can be written by considering what one would have written had
+one not been able to include the image.
+
+A corollary to this is that the alt attribute's value should
+never contain text that could be considered the image's caption, title, or
+legend. It is supposed to contain replacement text that could be used by users
+instead of the image; it is not meant to supplement the image. The title attribute can be used for supplemental information.
+
+Another corollary is that the alt attribute's value should
+not repeat information that is already provided in the prose next to the image.
+
+One way to think of alternative text is to think about how you would read the page
+containing the image to someone over the phone, without mentioning that there is an image present.
+Whatever you say instead of the image is typically a good start for writing the alternative
+text.
+
+###### 4.8.4.4.2 A link or button containing nothing but the image
+
+When an a element that creates a hyperlink, or a button
+element, has no textual content but contains one or more images, the alt attributes must contain text that together convey the purpose of
+the link or button.
+
+In this example, a user is asked to pick their preferred color from a list of three. Each color
+is given by an image, but for users who have configured their user agent not to display images,
+the color names are used instead:
+
+<h1>Pick your color</h1>
+<ul>
+<li><a href="green.html"><img src="green.jpeg" alt="Green"></a></li>
+<li><a href="blue.html"><img src="blue.jpeg" alt="Blue"></a></li>
+<li><a href="red.html"><img src="red.jpeg" alt="Red"></a></li>
+</ul>
+
+In this example, each button has a set of images to indicate the kind of color output desired
+by the user. The first image is used in each case to give the alternative text.
+
+<button name="rgb"><img src="red" alt="RGB"><img src="green" alt=""><img src="blue" alt=""></button>
+<button name="cmyk"><img src="cyan" alt="CMYK"><img src="magenta" alt=""><img src="yellow" alt=""><img src="black" alt=""></button>
+
+Since each image represents one part of the text, it could also be written like this:
+
+<button name="rgb"><img src="red" alt="R"><img src="green" alt="G"><img src="blue" alt="B"></button>
+<button name="cmyk"><img src="cyan" alt="C"><img src="magenta" alt="M"><img src="yellow" alt="Y"><img src="black" alt="K"></button>
+
+However, with other alternative text, this might not work, and putting all the alternative
+text into one image in each case might make more sense:
+
+<button name="rgb"><img src="red" alt="sRGB profile"><img src="green" alt=""><img src="blue" alt=""></button>
+<button name="cmyk"><img src="cyan" alt="CMYK profile"><img src="magenta" alt=""><img src="yellow" alt=""><img src="black" alt=""></button>
+
+###### 4.8.4.4.8 A purely decorative image that doesn't add any information
+
+If an image is decorative but isn't especially page-specific - for example an image that
+forms part of a site-wide design scheme - the image should be specified in the site's CSS,
+not in the markup of the document.
+
+However, a decorative image that isn't discussed by the surrounding text but still has some
+relevance can be included in a page using the img element. Such images are
+decorative, but still form part of the content. In these cases, the alt attribute must be present but its value must be the empty
+string.
+
+Examples where the image is purely decorative despite being relevant would include things like
+a photo of the Black Rock City landscape in a blog post about an event at Burning Man, or an
+image of a painting inspired by a poem, on a page reciting that poem. The following snippet shows
+an example of the latter case (only the first verse is included in this snippet):
+
+<h1>The Lady of Shalott</h1>
+<p><img src="shalott.jpeg" alt=""></p>
+<p>On either side the river lie<br>
+Long fields of barley and of rye,<br>
+That clothe the wold and meet the sky;<br>
+And through the field the road run by<br>
+To many-tower'd Camelot;<br>
+And up and down the people go,<br>
+Gazing where the lilies blow<br>
+Round an island there below,<br>
+The island of Shalott.</p>
+
+###### 4.8.4.4.15 Guidance for conformance checkers
+
+A conformance checker must report the lack of an alt
+attribute as an error unless one of the conditions listed below applies:
+
+- The img element is in a figure element that satisfies the conditions described above.
+- The img element has a title attribute with a
+value that is not the empty string (also as described
+above).
+- The conformance checker has been configured to assume that the document is an email or
+document intended for a specific person who is known to be able to view images.

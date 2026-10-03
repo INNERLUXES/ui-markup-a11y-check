@@ -1,0 +1,92 @@
+Source: https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html
+
+## Understanding SC 1.3.1 Info and Relationships (Level A)
+
+## In Brief
+
+Goal
+
+Information about content structure is available to more people.
+
+What to do
+
+Use code to reinforce relationships and information conveyed through presentation.
+
+Why it's important
+
+People can adapt the presentation to suit their needs while preserving the original meaning.
+
+## Success Criterion (SC)
+
+Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.
+
+## Intent
+
+The intent of this success criterion is to ensure that information and relationships
+that are implied by visual or auditory formatting are preserved when the presentation
+format changes. For example, the presentation format changes when the content is read
+by a screen reader or when a user style sheet is substituted for the style sheet provided
+by the author.
+
+Sighted users perceive structure and relationships through various visual cues
+- headings are often in a larger, bold font separated from paragraphs by blank lines;
+list items are preceded by a bullet and perhaps indented; paragraphs are separated
+by a blank line; items that share a common characteristic are organized into tabular
+rows and columns; form fields may be positioned as groups that share text labels;
+a different background color may be used to indicate that several items are related
+to each other; words that have special status are indicated by changing the font family
+and /or bolding, italicizing, or underlining them; items that share a common characteristic
+are organized into a table where the relationship of cells sharing the same row or
+column and the relationship of each cell to its row and/or column header are necessary
+for understanding; and so on. Having these structures and these relationships programmatically
+determined or available in text ensures that information important for comprehension
+will be perceivable to all.
+
+Auditory cues may be used as well. For example, a chime might indicate the beginning
+of a new section; a change in voice pitch or speech rate may be used to emphasize
+important information or to indicate quoted text; etc.
+
+When such relationships are perceivable to one set of users, those relationships can
+be made to be perceivable to all. One method of determining whether or not information
+has been properly provided to all users is to access the information serially in different
+modalities.
+
+If links to glossary items are implemented using anchor elements (or the proper link
+element for the technology in use) and identified using a different font face, a screen
+reader user will hear that the item is a link when the glossary term is encountered
+even though they may not receive information about the change in font face. An on-line
+catalog may indicate prices using a larger font colored red. A screen reader or person
+who cannot perceive red, still has the information about the price as long as it is
+preceded by the currency symbol.
+
+Some technologies do not provide a means to programmatically determine some types
+of information and relationships. In that case then there should be a text description
+of the information and relationships. For instance, "all required fields are marked
+with an asterisk (*)". The text description should be near the information it is describing
+(when the page is linearized), such as in the parent element or in the adjacent element.
+
+There may also be cases where it may be a judgment call as to whether the relationships
+should be programmatically determined or be presented in text. However, when technologies
+support programmatic relationships, it is strongly encouraged that information and
+relationships be programmatically determined rather than described in text.
+
+Note
+
+It is not required that color values be programmatically determined. The information
+conveyed by color cannot be adequately presented simply by exposing the value. Therefore,
+
+Success Criterion 1.4.1 Use of Color
+addresses the specific case of color, rather than Success Criterion 1.3.1 Info and Relationships.
+
+## Benefits
+
+- This success criterion helps people with different disabilities by allowing user agents
+to adapt content according to the needs of individual users.
+
+- Users who are blind (using a screen reader) benefit when information conveyed through
+color is also available in text (including text alternatives for images that use color
+to convey information).
+
+- Users who are deaf-blind using braille (text) refreshable displays may be unable to
+access color-dependent information.
+

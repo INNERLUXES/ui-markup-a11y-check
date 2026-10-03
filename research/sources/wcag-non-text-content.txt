@@ -1,0 +1,199 @@
+Source: https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html
+
+## Understanding SC 1.1.1 Non-text Content (Level A)
+
+## In Brief
+
+Goal
+
+Non-text information is available to more people.
+
+What to do
+
+Create a text alternative for visual and auditory content.
+
+Why it's important
+
+People who can't fully see or hear content can understand it.
+
+## Success Criterion (SC)
+
+All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.
+
+Controls, Input
+
+If non-text content is a control or accepts user input, then it has a name that describes its purpose. (Refer to Success Criterion 4.1.2 for additional requirements for controls and content that accepts user input.)
+
+Time-Based Media
+
+If non-text content is time-based media, then text alternatives at least provide descriptive
+identification of the non-text content. (Refer to Guideline 1.2 for additional requirements for media.)
+
+Test
+
+If non-text content is a test or exercise that would be invalid if presented in text, then text alternatives at least provide descriptive identification of the non-text
+content.
+
+Sensory
+
+If non-text content is primarily intended to create a specific sensory experience, then text alternatives at least provide descriptive identification of the non-text
+content.
+
+CAPTCHA
+
+If the purpose of non-text content is to confirm that content is being accessed by
+a person rather than a computer, then text alternatives that identify and describe
+the purpose of the non-text content are provided, and alternative forms of CAPTCHA
+using output modes for different types of sensory perception are provided to accommodate
+different disabilities.
+
+Decoration, Formatting, Invisible
+
+If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it is implemented
+in a way that it can be ignored by assistive technology.
+
+## Intent
+
+The intent of this success criterion is to make information conveyed by non-text content
+accessible through the use of a text alternative. Text alternatives are a primary
+way for making information accessible because they can be rendered through any sensory
+modality (for example, visual, auditory or tactile) to match the needs of the user.
+Providing text alternatives allows the information to be rendered in a variety of
+ways by a variety of user agents. For example, people who cannot see a picture can
+have the text alternative read aloud using synthesized speech. People who cannot
+hear an audio file can have the text alternative displayed so that they can read
+it. In the future, text alternatives will also allow information to be more easily
+translated into sign language or into a simpler form of the same language.
+
+### Note on CAPTCHA
+
+CAPTCHAs are a controversial topic in the accessibility community. As is described in the
+paper
+Inaccessibility of CAPTCHA, CAPTCHAs intrinsically push the edges of human abilities in an attempt to defeat
+automated processes. Every type of CAPTCHA will be unsolvable by users with certain
+disabilities. However, they are widely used, and the Web Content Accessibility Guidelines
+Working Group believes that if CAPTCHAs were forbidden outright, websites would choose
+not to conform to WCAG rather than abandon CAPTCHA. This would create barriers for
+a great many more users with disabilities. For this reason the Working Group has chosen
+to structure the requirement about CAPTCHA in a way that meets the needs of most people
+with disabilities, yet is also considered adoptable by sites. Requiring two different
+forms of CAPTCHA on a given site ensures that most people with disabilities will find
+a form they can use.
+
+Because some users with disabilities will still not be able to access sites that meet
+the minimum requirements, the Working Group provides recommendations for additional
+steps. Organizations motivated to conform to WCAG should be aware of the importance
+of this topic and should go as far beyond the minimum requirements of the guidelines
+as possible. Additional recommended steps include:
+
+- Providing more than two modalities of CAPTCHAs
+
+- Providing access to a human customer service representative who can bypass CAPTCHA
+
+- Not requiring CAPTCHAs for authorized users
+
+### Note on alternatives matching the language of content
+
+Text alternatives and equivalents should match the human language of the original content (normally the default human language of the page). The 5.2 Conformance Requirements section, through the defined terms used there, states that success criteria be met through accessibility-supported ways (5.2.4), where the technology is used "in the human language of the content." Where an alternative version is used (5.2.1), it is defined as something that "provides all of the same information and functionality in the same human language."
+
+### Additional information
+
+Non-text content can take a number of forms, and this success criterion specifies
+how each is to be handled.
+
+For non-text content that is not covered by one of the other situations listed below,
+
+such as charts, diagrams, audio recordings, pictures, and animations, text alternatives
+can make the same information available in a form that can be rendered through any
+modality (for example, visual, auditory or tactile). Short and long text alternatives
+can be used as needed to convey the information in the non-text content. Note that
+
+prerecorded
+audio-only
+and
+
+prerecorded
+video-only
+files are covered here.
+
+Live-audio-only
+and
+
+Live-video-only
+files are covered below (see 3rd paragraph following this one).
+
+For non-text content that is a control or accepts user input
+, such as images used as submit buttons, image maps or complex animations, a name
+is provided to describe the purpose of the non-text content so that the person at
+least knows what the non-text content is and why it is there.
+
+Non-text content that is time-based media
+
+is made accessible through
+1.2: Time-Based Media. However, it is important that users know what it is when they encounter it on a
+page so they can decide what action if any they want to take with it. A text alternative
+that describes the time-based media and/or gives its title is therefore provided.
+
+For Live Audio-only and live video-only content
+, it can be much more difficult to provide text alternatives that provide equivalent
+information as live audio-only and live video-only content. For these types of non-text
+content, text alternatives provide a descriptive label.
+
+Sometimes a test or exercise must be partially or completely presented in non-text
+format.
+Audio or visual information is provided that cannot be changed to text because the
+test or exercise must be conducted using that sense. For example, a hearing test
+would be invalid if a text alternative were provided. A visual skill development
+exercise would similarly make no sense in text form. And a spelling test with text
+alternatives would not be very effective. For these cases, text alternatives should
+be provided to describe the purpose of the non-text content; of course, the text alternatives
+would not provide the same information needed to pass the test.
+
+Sometimes content is primarily intended to create a specific sensory experience
+that words cannot fully capture. Examples include a symphony performance, works of
+visual art etc. For such content, text alternatives at least identify the non-text
+content with a descriptive label and where possible, additional descriptive text.
+If the reason for including the content in the page is known and can be described
+it is helpful to include that information.
+
+Sometimes there are non-text exercises that are used to prove you are human. To avoid spam robots and other software from gaining access to a site a device called
+a CAPTCHA is used. These usually involve visual or auditory tasks that are beyond
+the current capabilities of web robots. Providing a text alternative to them would
+however make them operable by Robots, thus defeating their purpose. In this case a
+text alternative would describe the purpose of the CAPTCHA, and alternate forms using
+different modalities would be provided to address the needs of people with different
+disabilities.
+
+Sometimes there is non-text content that really is not meant to be seen or understood
+by the user.
+Transparent images used to move text over on a page; an invisible image that is used
+to track usage statistics; and a swirl in the corner that conveys no information but
+just fills up a blank space to create an aesthetic effect are all examples of this.
+Putting alternative text on such items just distracts people using screen readers
+from the content on the page. Not marking the content in any way, though, leaves users
+guessing what the non-text content is and what information they may have missed (even
+though they have not missed anything in reality). This type of non-text content, therefore,
+is marked or implemented in a way that assistive technologies (AT) will ignore it
+and not present anything to the user.
+
+## Benefits
+
+- This success criterion helps people who have difficulty perceiving visual content.
+Assistive technology can read text aloud, present it visually, or convert it to braille.
+
+- Text alternatives may help some people who have difficulty understanding the meaning
+of photographs, drawings, and other images (e.g., line drawings, graphic designs,
+paintings, three-dimensional representations), graphs, charts, animations, etc.
+
+-
+People who are deaf, are hard of hearing, or who are having trouble understanding
+audio information for any reason can read the text presentation. Research is ongoing
+regarding automatic translation of text into sign language.
+
+-
+People who are deaf-blind can read the text in braille.
+
+-
+Additionally, text alternatives support the ability to search for non-text content
+and to repurpose content in a variety of ways.
+

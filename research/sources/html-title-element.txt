@@ -1,0 +1,55 @@
+Source: https://html.spec.whatwg.org/multipage/semantics.html#the-title-element
+
+#### 4.2.2 The title element
+
+Categories:
+Metadata content.
+Contexts in which this element can be used:
+In a head element containing no other title elements.
+Content model:
+Text that is not inter-element whitespace.
+Tag omission in text/html:
+Neither tag is omissible.
+Content attributes:
+Global attributes
+Accessibility considerations:
+For authors.
+For implementers.
+Sanitization:
+Default.
+
+The title element represents the document's title or name. Authors
+should use titles that identify their documents even when they are used out of context, for
+example in a user's history or bookmarks, or in search results. The document's title is often
+different from its first heading, since the first heading does not have to stand alone when taken
+out of context.
+
+There must be no more than one title element per document.
+
+If it's reasonable for the Document to have no title, then the
+title element is probably not required. See the head element's content
+model for a description of when the element is required.
+
+Here are some examples of appropriate titles, contrasted with the top-level headings that
+might be used on those same pages.
+
+<title>Introduction to The Mating Rituals of Bees</title>
+...
+<h1>Introduction</h1>
+<p>This companion guide to the highly successful
+<cite>Introduction to Medieval Bee-Keeping</cite> book is...
+
+The next page might be a part of the same site. Note how the title describes the subject
+matter unambiguously, while the first heading assumes the reader knows what the context is and
+therefore won't wonder if the dances are Salsa or Waltz:
+
+<title>Dances used during bee mating rituals</title>
+...
+<h1>The Dances</h1>
+
+The string to use as the document's title is given by the document.title IDL attribute.
+
+User agents should use the document's title when referring to the document in their user
+interface. When the contents of a title element are used in this way, the
+directionality of that title element should be used to set the directionality
+of the document's title in the user interface.

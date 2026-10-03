@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create your account - Trailhead Outfitters</title>
+</head>
+<body>
+  <main>
+    <h1>Create your account</h1>
+    <form action="/account" method="post">
+      <h2>Your details</h2>
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email">
+      <label for="full-name">Full name</label>
+      <input type="text" id="full-name" name="full-name">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" aria-describedby="pass-rules">
+      <p id="pass-rules">At least ten characters.</p>
+      <label><input type="checkbox" name="news"> Send me trail news</label>
+      <p id="news-hint">You can leave the list at any time.</p>
+      <button type="submit">Create account</button>
+    </form>
+  </main>
+</body>
+</html>

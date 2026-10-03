@@ -1,0 +1,116 @@
+Source: https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html
+
+## Understanding SC 1.4.4 Resize Text (Level AA)
+
+## In Brief
+
+Goal
+
+Text can be enlarged.
+
+What to do
+
+Ensure text can be doubled in size.
+
+Why it's important
+
+Some people can only read text when it is bigger.
+
+## Success Criterion (SC)
+
+Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.
+
+## Intent
+
+The intent of this success criterion is to ensure that visually rendered text, including
+controls and labels using text, can be made larger so that it can be read more easily by
+people with milder visual impairments, without requiring the use of assistive technology
+(such as a screen magnifier). Users may benefit from scaling all content on the web page,
+but text is most critical.
+
+The scaling of content is primarily a user agent responsibility. User agents that
+satisfy
+UAAG 1.0 Checkpoint 4.1
+allow users to configure text scale through a number of mechanisms - including zoom (of the entire page's content),
+magnification, text-only resizing, and allowing the user to configure a size for rendered text.
+The author's responsibility is to create web content that does not prevent the user agent from scaling the content effectively.
+Authors may satisfy this success criterion by verifying that content does not interfere
+with user agent support for resizing text, including text-based controls, or by providing
+direct support for resizing text or changing the layout. An example of direct support
+might be via server-side script that can be used to assign different style sheets.
+
+Content satisfies the success criterion if it can be scaled up to 200% using at least one text scaling
+mechanism supported by user agents.
+
+If the author is using a technology whose user agents do not provide support for specific text scaling mechanisms,
+the author is responsible for providing this type of functionality directly, or providing
+content that works with the type of functionality provided by the user agent. For instance, if the
+user agent doesn't provide full-page zoom functionality, but does let the user change the
+text size, the author is responsible for ensuring that the content remains usable
+when the text is resized.
+
+Some user interface components that function as a label and require activation by
+the user to access content are not wide enough to accommodate the label's content.
+For example, in web mail applications the subject column may not be wide enough to
+accommodate every possible subject header, but activating the subject header takes
+the user to the full message with the full subject header. In Web-based spreadsheets,
+cell content that is too long to be displayed in a column can be truncated, and the
+full content of the cell is available to the user when the cell receives focus. The
+content of a user interface component may also become too wide in user interfaces
+where the user can resize the column width. In this type of user interface component,
+line wrapping is not required; truncation is acceptable if the component's full content
+is available on focus or after user activation and an indication that this information
+can be accessed, is provided to the user in some way besides the fact that it is truncated.
+
+Content satisfies the success criterion if it can be scaled up to 200% - that is, up
+to twice the width and height. Authors may support scaling beyond that limit, however,
+as scaling becomes more extreme, adaptive layouts may introduce usability problems.
+For example, words may be too wide to fit into the horizontal space available to them,
+causing them to be truncated; layout constraints may cause text to overlap with other
+content when it is scaled larger; or only one word of a sentence may fit on each line,
+causing the sentence to be displayed as a vertical column of text that is difficult
+to read.
+
+If the resizing mechanism (whether it's provided by the user agent, or implemented
+by the author) offers incremental resizing steps between 100% and 200%, authors must
+ensure that there is no loss of content or functionality at these incremental steps.
+
+The working group feels that 200% is a reasonable accommodation that can support a
+wide range of designs and layouts, and complements older screen magnifiers that provide
+a minimum magnification of 200%. Above 200%, zoom (which resizes text, images, and
+layout regions and creates a larger canvas that may require both horizontal and vertical
+scrolling) may be more effective than text resizing. Assistive technology dedicated
+to zoom support would usually be used in such a situation, and may provide better accessibility
+than attempts by the author to support the user directly.
+
+Note
+
+Images of text do not scale as well as text because they tend to pixelate, and therefore
+we suggest using text wherever possible. It is also harder to change foreground and
+background contrast and color combinations for images of text, which are necessary
+for some users. See also Success Criterion 1.4.5 Images of Text.
+
+Note
+
+The criterion does not apply to content or interface elements controlled by the user agent or platform.
+
+For instance, in most browsers, the title attribute on an element causes a tooltip
+to appear when the element is hovered with the mouse. Another example is that activating an <input type="file"> to upload a file will open the platform's
+file browser. In both these examples, the size of the text is determined by the browser or platform,
+rather than the content author, and is therefore not covered by the criterion.
+
+Note
+
+As with most other success criteria, this criterion applies to each variation of the page that is automatically presented for various screen sizes (e.g. media query variations in a responsive site). In an implementation where text does not consistently increase its size as people zoom in (such as when it is transformed based on a media query to adapt to small-screen usage), it must still be possible to get to 200% enlargement in order to satisfy the criterion.
+
+For example, if at the default browser setting of 100% zoom, text is set at 20px when the window is 1280 CSS pixels wide, at 200% zoom it will visually appear at twice the size. After zooming by 400% the page reflows to fit within the 320 CSS pixel viewport, the author may decide to set the page's text size to 10px. The text is now half the original size in CSS pixels, but as it has been enlarged to 400%, it is still displayed at twice the size compared to the default browser setting at 100% zoom. It is not required to achieve 200% text enlargement while remaining inside a specific breakpoint (as zooming may result in the variation for a new breakpoint becoming active), but it should still be possible to get 200% text enlargement in some way compared to the default 100% zoom.
+
+See also
+1.4.8 Visual Presentation.
+
+## Benefits
+
+-
+This success criterion helps people with low vision by letting them increase text
+size in content so that they can read it.
+

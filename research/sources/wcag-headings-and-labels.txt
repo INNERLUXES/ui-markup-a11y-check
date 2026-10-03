@@ -1,0 +1,65 @@
+Source: https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html
+
+## Understanding SC 2.4.6 Headings and Labels (Level AA)
+
+## In Brief
+
+Goal
+
+A page's content is described in headings and labels
+
+What to do
+
+Provide descriptive headings and labels
+
+Why it's important
+
+People can orient themselves, especially those with cognitive or visual disabilities.
+
+## Success Criterion (SC)
+
+Headings and labels describe topic or purpose.
+
+## Intent
+
+The intent of this success criterion is to help users understand what information
+is contained in web pages and how that information is organized. When headings are
+clear and descriptive, users can find the information they seek more easily, and they
+can understand the relationships between different parts of the content more easily.
+Descriptive labels help users identify specific components within the content.
+
+Labels and headings do not need to be lengthy. A word, or even a single character,
+may suffice if it provides an appropriate cue to finding and navigating content.
+
+Labels of form controls are usually text-based. In some cases, images can serve as descriptive labels without additional text. In these cases, authors should ensure that the image and its use as a label (in context) are widely understood.
+
+Note that the same image can be interpreted differently in different contexts. However, it can still be considered descriptive if its use is commonly understood in each context. For example, when accompanying a text field, a loupe or magnifying glass icon with text alternative of "Search" is commonly interpreted as indicating the field is for entering and submitting a search query.
+
+Placed on or near another image, a loupe or magnifying glass icon is commonly interpreted as a means to view a magnified version of the image (for instance, acting as a mechanism to zoom into the image, or opening a full-sized image in a new window).
+
+This success criterion requires that if headings or labels are provided, they be descriptive. This success criterion does not require headings or labels; labels for inputs are covered separately by 3.3.2 Labels or Instructions. This success criterion also
+does not require that content acting as a heading or label be correctly marked up or
+identified - that aspect is covered separately by
+1.3.1 Info and Relationships. It is possible for content
+to pass this success criterion (providing descriptive content that acts as headings or labels) while failing
+Success Criterion 1.3.1 (if the headings or labels aren't correctly marked up/identified). Conversely,
+it is also possible for content to pass Success Criterion 1.3.1 (with headings or labels correctly
+marked up or identified), while failing this success criterion (if those headings or labels are inaccurate or insufficiently clear).
+
+Further, in the case of labels, this success criterion does not take into consideration whether or not
+alternative methods of providing an accessible name for form controls and inputs have been
+used - that aspect is covered separately by 4.1.2 Name, Role, Value. It is possible
+for controls and inputs to have an appropriate accessible name (e.g. using aria-label="...")
+and therefore pass Success Criterion 4.1.2, but to still fail this success criterion (if the label is inaccurate or insufficiently clear or descriptive).
+
+This success criterion does not require the use of labels; however, it does require that if labels are present, they must be accurate and sufficiently clear or descriptive. Please see 3.3.2 Labels or Instructions for more information on the use of labels.
+
+## Benefits
+
+- Descriptive headings are especially helpful for users who have disabilities that make
+reading slow and for people with limited short-term memory. These people benefit when
+section titles make it possible to predict what each section contains.
+
+- Form input controls with labels that clearly and accurately describe the content that is expected to be
+entered helps users know how to successfully complete the form.
+
