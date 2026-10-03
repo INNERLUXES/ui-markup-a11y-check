@@ -1,0 +1,30 @@
+ui-markup-a11y-check: examples/site-fixed
+files: 3 HTML files, 3 read, 0 not read, 0 other files not read, 0 links not followed, 0 folders skipped
+markup: 3 pages, 0 fragments, 74 elements, 4 images, 12 controls, 6 headings
+areas:
+  Page                 info  summary x3
+  Images and media     pass  no finding
+  Names and labels     pass  no finding
+  Headings and tables  pass  no finding
+  IDs and references   pass  no finding
+  Focus                pass  no finding
+findings: 0 error, 0 warning, 3 info
+
+Page (3 findings)
+
+  INFO     summary  examples/site-fixed/index.html
+           Page with 19 elements: 2 images (1 with alt text, 1 with alt="", 0 with no alt), 4 controls (0 buttons, 4 links, 0 form fields), 2 headings: h1 Shoes for every path and h2 New this season.
+           basis: "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text." (Success Criterion (SC), https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
+           fix: Nothing to fix; this is what the tool read. A clean report means none of the checks found anything in the markup, not that the page is accessible.
+
+  INFO     summary  examples/site-fixed/product.html
+           Page with 34 elements: 2 images (2 with alt text, 0 with alt="", 0 with no alt), 3 controls (1 button, 1 link, 1 form field), 2 headings: h1 Ridge Runner trail shoe and h2 Sizes.
+           basis: "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text." (Success Criterion (SC), https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
+           fix: Nothing to fix; this is what the tool read. A clean report means none of the checks found anything in the markup, not that the page is accessible.
+
+  INFO     summary  examples/site-fixed/signup.html
+           Page with 21 elements: 0 images (0 with alt text, 0 with alt="", 0 with no alt), 5 controls (1 button, 0 links, 4 form fields), 2 headings: h1 Create your account and h2 Your details.
+           basis: "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text." (Success Criterion (SC), https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
+           fix: Nothing to fix; this is what the tool read. A clean report means none of the checks found anything in the markup, not that the page is accessible.
+
+GATE: PASS (--fail-on warning)

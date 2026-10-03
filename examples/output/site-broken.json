@@ -1,0 +1,683 @@
+{
+  "tool": "ui-markup-a11y-check",
+  "version": "1.0.0",
+  "inputs": [
+    "examples/site-broken"
+  ],
+  "files": {
+    "html": 3,
+    "read": 3,
+    "notRead": 0,
+    "otherFiles": 0,
+    "links": 0,
+    "skippedFolders": 0,
+    "pages": 3,
+    "fragments": 0,
+    "elements": 72,
+    "images": 4,
+    "controls": 12,
+    "headings": 6
+  },
+  "areas": [
+    {
+      "id": "page",
+      "title": "Page",
+      "result": "fail",
+      "detail": "summary x3, html-no-lang x1, page-no-title x1, viewport-blocks-zoom x1",
+      "findings": 6
+    },
+    {
+      "id": "images",
+      "title": "Images and media",
+      "result": "fail",
+      "detail": "img-no-alt x2, autoplay-media x1",
+      "findings": 3
+    },
+    {
+      "id": "names",
+      "title": "Names and labels",
+      "result": "fail",
+      "detail": "control-no-name x1, form-field-no-label x3, title-only-name x2, vague-link-text x1",
+      "findings": 7
+    },
+    {
+      "id": "structure",
+      "title": "Headings and tables",
+      "result": "warn",
+      "detail": "heading-skip x1, no-h1 x1, table-no-headers x1, several-h1 x1",
+      "findings": 4
+    },
+    {
+      "id": "ids",
+      "title": "IDs and references",
+      "result": "fail",
+      "detail": "duplicate-id x1, aria-reference-missing x2",
+      "findings": 3
+    },
+    {
+      "id": "focus",
+      "title": "Focus",
+      "result": "fail",
+      "detail": "aria-hidden-focusable x1, positive-tabindex x1",
+      "findings": 2
+    }
+  ],
+  "findings": [
+    {
+      "id": "summary",
+      "severity": "info",
+      "area": "page",
+      "file": "examples/site-broken/index.html",
+      "line": 0,
+      "column": 0,
+      "snippet": "",
+      "subject": "summary",
+      "message": "Page with 19 elements: 2 images (1 with alt text, 1 with alt=\"\", 0 with no alt), 4 controls (0 buttons, 4 links, 0 form fields), 2 headings: h1 Shoes for every path and h1 New this season.",
+      "fix": "Nothing to fix; this is what the tool read. A clean report means none of the checks found anything in the markup, not that the page is accessible.",
+      "basis": [
+        {
+          "text": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+    },
+    {
+      "id": "summary",
+      "severity": "info",
+      "area": "page",
+      "file": "examples/site-broken/product.html",
+      "line": 0,
+      "column": 0,
+      "snippet": "",
+      "subject": "summary",
+      "message": "Page with 32 elements: 2 images (0 with alt text, 0 with alt=\"\", 2 with no alt), 3 controls (1 button, 1 link, 1 form field), 2 headings: h2 Ridge Runner trail shoe and h3 Sizes.",
+      "fix": "Nothing to fix; this is what the tool read. A clean report means none of the checks found anything in the markup, not that the page is accessible.",
+      "basis": [
+        {
+          "text": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+    },
+    {
+      "id": "summary",
+      "severity": "info",
+      "area": "page",
+      "file": "examples/site-broken/signup.html",
+      "line": 0,
+      "column": 0,
+      "snippet": "",
+      "subject": "summary",
+      "message": "Page with 21 elements: 0 images (0 with alt text, 0 with alt=\"\", 0 with no alt), 5 controls (1 button, 0 links, 4 form fields), 2 headings: h1 Create your account and h3 Your details.",
+      "fix": "Nothing to fix; this is what the tool read. A clean report means none of the checks found anything in the markup, not that the page is accessible.",
+      "basis": [
+        {
+          "text": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+    },
+    {
+      "id": "html-no-lang",
+      "severity": "error",
+      "area": "page",
+      "file": "examples/site-broken/signup.html",
+      "line": 2,
+      "column": 1,
+      "snippet": "<html>",
+      "subject": "lang",
+      "message": "The html element has no lang attribute, so the language of the page cannot be determined from the markup. A screen reader reads the page with the rules of its own default language, which may be the wrong one.",
+      "fix": "Add the main language of the page to the html start tag, such as <html lang=\"en\"> or <html lang=\"de-CH\">.",
+      "basis": [
+        {
+          "text": "The default human language of each web page can be programmatically determined.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html"
+        },
+        {
+          "text": "Screen readers can load the correct pronunciation rules.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html"
+    },
+    {
+      "id": "page-no-title",
+      "severity": "error",
+      "area": "page",
+      "file": "examples/site-broken/product.html",
+      "line": 2,
+      "column": 1,
+      "snippet": "<html lang=\"en\">",
+      "subject": "title",
+      "message": "The page has no title element. The title is what a browser tab, a bookmark, the history and a screen reader announce first when the page opens.",
+      "fix": "Add a title element to the head that names the page and the site, such as <title>Create your account - Example Shop</title>.",
+      "basis": [
+        {
+          "text": "The title element represents the document's title or name.",
+          "section": "The title element",
+          "source": "https://html.spec.whatwg.org/multipage/semantics.html#the-title-element"
+        },
+        {
+          "text": "Authors should use titles that identify their documents even when they are used out of context, for example in a user's history or bookmarks, or in search results.",
+          "section": "The title element",
+          "source": "https://html.spec.whatwg.org/multipage/semantics.html#the-title-element"
+        }
+      ],
+      "source": "https://html.spec.whatwg.org/multipage/semantics.html#the-title-element"
+    },
+    {
+      "id": "viewport-blocks-zoom",
+      "severity": "error",
+      "area": "page",
+      "file": "examples/site-broken/signup.html",
+      "line": 5,
+      "column": 3,
+      "snippet": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">",
+      "subject": "viewport",
+      "message": "The viewport meta tag sets user-scalable=no and maximum-scale=1, which stops people from zooming the page on a phone to at least twice its size.",
+      "fix": "Remove user-scalable=no and maximum-scale from the content of the viewport meta tag; content=\"width=device-width, initial-scale=1\" is enough.",
+      "basis": [
+        {
+          "text": "Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html"
+        },
+        {
+          "text": "The author's responsibility is to create web content that does not prevent the user agent from scaling the content effectively.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html"
+    },
+    {
+      "id": "img-no-alt",
+      "severity": "error",
+      "area": "images",
+      "file": "examples/site-broken/product.html",
+      "line": 10,
+      "column": 5,
+      "snippet": "<img src=\"img/ridge-runner-red.jpg\" width=\"480\" height=\"320\">",
+      "subject": "alt",
+      "message": "The image \"ridge-runner-red.jpg\" has no alt attribute. A screen reader then reads the file name or says only \"image\", and a person who cannot see it gets nothing in its place. alt=\"\" is right for an image that is only decoration.",
+      "fix": "Add an alt attribute: the text that would replace the image if it could not be shown (alt=\"Red trail running shoe, side view\"), or alt=\"\" if the image adds nothing to the text around it.",
+      "basis": [
+        {
+          "text": "Except where otherwise specified, the alt attribute must be specified and its value must not be empty; the value must be an appropriate replacement for the image.",
+          "section": "General guidelines",
+          "source": "https://html.spec.whatwg.org/multipage/images.html#alt"
+        },
+        {
+          "text": "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html"
+        }
+      ],
+      "source": "https://html.spec.whatwg.org/multipage/images.html#alt"
+    },
+    {
+      "id": "img-no-alt",
+      "severity": "error",
+      "area": "images",
+      "file": "examples/site-broken/product.html",
+      "line": 23,
+      "column": 7,
+      "snippet": "<input type=\"image\" src=\"img/add-to-cart.png\">",
+      "subject": "alt",
+      "message": "The image button (input type=\"image\") has no alt text, so it has no name. A screen reader says only \"button\", or reads the file name of the image.",
+      "fix": "Give the image button an alt attribute that says what it does, such as alt=\"Search\" or alt=\"Add to cart\".",
+      "basis": [
+        {
+          "text": "Except where otherwise specified, the alt attribute must be specified and its value must not be empty; the value must be an appropriate replacement for the image.",
+          "section": "General guidelines",
+          "source": "https://html.spec.whatwg.org/multipage/images.html#alt"
+        },
+        {
+          "text": "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html"
+        }
+      ],
+      "source": "https://html.spec.whatwg.org/multipage/images.html#alt"
+    },
+    {
+      "id": "autoplay-media",
+      "severity": "warning",
+      "area": "images",
+      "file": "examples/site-broken/product.html",
+      "line": 11,
+      "column": 5,
+      "snippet": "<video src=\"media/ridge-runner.mp4\" autoplay loop>",
+      "subject": "autoplay",
+      "message": "The video element plays by itself when the page opens (autoplay) and is not muted. If it has sound that lasts more than 3 seconds, it talks over a screen reader, and the person has to find the control to stop it while it plays. It has no controls attribute, so the markup gives no way to pause it.",
+      "fix": "Remove autoplay and let the person start the video; or add muted (and playsinline for a video) when it plays with no sound; and keep the controls attribute so it can be paused.",
+      "basis": [
+        {
+          "text": "If any audio on a web page plays automatically for more than 3 seconds, either a mechanism is available to pause or stop the audio, or a mechanism is available to control audio volume independently from the overall system volume level.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html"
+        },
+        {
+          "text": "Individuals who use screen reading software can find it hard to hear the speech output if there is other audio playing at the same time.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html"
+    },
+    {
+      "id": "control-no-name",
+      "severity": "error",
+      "area": "names",
+      "file": "examples/site-broken/signup.html",
+      "line": 20,
+      "column": 7,
+      "snippet": "<button type=\"submit\" tabindex=\"1\">",
+      "subject": "name",
+      "message": "The button (<button>) has no accessible name: no text inside it, no aria-label, and no aria-labelledby that points at text. Its only content is an svg icon with no title, which gives it no text. A screen reader says only \"button\".",
+      "fix": "Add visible text to the button, or an aria-label that says what it does when it shows only an icon (aria-label=\"Add to cart\").",
+      "basis": [
+        {
+          "text": "Success Criterion 4.1.2 Name, Role, Value requires a programmatically determinable name for all user interface components.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+        },
+        {
+          "text": "When an a element that creates a hyperlink, or a button element, has no textual content but contains one or more images, the alt attributes must contain text that together convey the purpose of the link or button.",
+          "section": "A link or button containing nothing but the image",
+          "source": "https://html.spec.whatwg.org/multipage/images.html#alt"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+    },
+    {
+      "id": "form-field-no-label",
+      "severity": "error",
+      "area": "names",
+      "file": "examples/site-broken/product.html",
+      "line": 19,
+      "column": 7,
+      "snippet": "<select name=\"size\">",
+      "subject": "label",
+      "message": "The select has no label: no label element names it with for or wraps it, and it has no aria-label or aria-labelledby. A screen reader announces only the kind of field, such as \"edit text\" or \"combo box\", so the person does not know what to enter.",
+      "fix": "Give the field an id and add a label element with that for and visible text, or wrap the field in its label.",
+      "basis": [
+        {
+          "text": "Success Criterion 4.1.2 Name, Role, Value requires a programmatically determinable name for all user interface components.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+        },
+        {
+          "text": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+    },
+    {
+      "id": "form-field-no-label",
+      "severity": "error",
+      "area": "names",
+      "file": "examples/site-broken/signup.html",
+      "line": 14,
+      "column": 7,
+      "snippet": "<input type=\"text\" name=\"full-name\">",
+      "subject": "label",
+      "message": "The field (<input type=\"text\">) has no label: no label element names it with for or wraps it, and it has no aria-label or aria-labelledby. A screen reader announces only the kind of field, such as \"edit text\" or \"combo box\", so the person does not know what to enter.",
+      "fix": "Give the field an id and add a label element with that for and visible text, or wrap the field in its label.",
+      "basis": [
+        {
+          "text": "Success Criterion 4.1.2 Name, Role, Value requires a programmatically determinable name for all user interface components.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+        },
+        {
+          "text": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+    },
+    {
+      "id": "form-field-no-label",
+      "severity": "error",
+      "area": "names",
+      "file": "examples/site-broken/signup.html",
+      "line": 16,
+      "column": 7,
+      "snippet": "<input type=\"password\" id=\"password\" name=\"password\" aria-describedby=\"pass-rules\">",
+      "subject": "label",
+      "message": "The field (<input type=\"password\">, id \"password\") has no label: no label element names it with for or wraps it, and it has no aria-label or aria-labelledby. A screen reader announces only the kind of field, such as \"edit text\" or \"combo box\", so the person does not know what to enter.",
+      "fix": "Add a label element with for=\"password\" and visible text, such as <label for=\"password\">Password</label>.",
+      "basis": [
+        {
+          "text": "Success Criterion 4.1.2 Name, Role, Value requires a programmatically determinable name for all user interface components.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+        },
+        {
+          "text": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+    },
+    {
+      "id": "title-only-name",
+      "severity": "warning",
+      "area": "names",
+      "file": "examples/site-broken/product.html",
+      "line": 24,
+      "column": 7,
+      "snippet": "<button type=\"button\" title=\"Save to wish list\">",
+      "subject": "title",
+      "message": "The only name of this button (<button>) comes from its title attribute (\"Save to wish list\"). Many screen readers, keyboards and touch devices never show or read a title.",
+      "fix": "Put the name in the button itself: visible text, or an aria-label when the button shows only an icon.",
+      "basis": [
+        {
+          "text": "Relying on the title attribute is currently discouraged as many user agents do not expose the attribute in an accessible manner as required by this specification (e.g., requiring a pointing device such as a mouse to cause a tooltip to appear, which excludes keyboard-only users and touch-only users, such as anyone with a modern phone or tablet).",
+          "section": "The title attribute",
+          "source": "https://html.spec.whatwg.org/multipage/dom.html#global-attributes"
+        },
+        {
+          "text": "Success Criterion 4.1.2 Name, Role, Value requires a programmatically determinable name for all user interface components.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+        }
+      ],
+      "source": "https://html.spec.whatwg.org/multipage/dom.html#global-attributes"
+    },
+    {
+      "id": "title-only-name",
+      "severity": "warning",
+      "area": "names",
+      "file": "examples/site-broken/signup.html",
+      "line": 13,
+      "column": 7,
+      "snippet": "<input type=\"email\" name=\"email\" placeholder=\"Email address\">",
+      "subject": "placeholder",
+      "message": "The only name of this form field (<input type=\"email\">) comes from its placeholder (\"Email address\"). A placeholder disappears as soon as the person types, and not every screen reader reads it.",
+      "fix": "Add a visible label element with for set to the id of the field, and keep the placeholder only as an example of the input.",
+      "basis": [
+        {
+          "text": "Relying on the title attribute is currently discouraged as many user agents do not expose the attribute in an accessible manner as required by this specification (e.g., requiring a pointing device such as a mouse to cause a tooltip to appear, which excludes keyboard-only users and touch-only users, such as anyone with a modern phone or tablet).",
+          "section": "The title attribute",
+          "source": "https://html.spec.whatwg.org/multipage/dom.html#global-attributes"
+        },
+        {
+          "text": "Success Criterion 4.1.2 Name, Role, Value requires a programmatically determinable name for all user interface components.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+        }
+      ],
+      "source": "https://html.spec.whatwg.org/multipage/dom.html#global-attributes"
+    },
+    {
+      "id": "vague-link-text",
+      "severity": "warning",
+      "area": "names",
+      "file": "examples/site-broken/index.html",
+      "line": 21,
+      "column": 50,
+      "snippet": "<a href=\"product.html\">",
+      "subject": "link text",
+      "message": "The text of the link is \"Read more\". A screen reader can list all the links of a page, and in that list \"Read more\" says nothing about where the link goes. The sentence around it may give the context, but the link text alone does not.",
+      "fix": "Write link text that names the destination, such as \"Read more about the trail shoe\" or \"Size guide\", or add an aria-label that does.",
+      "basis": [
+        {
+          "text": "The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html"
+        },
+        {
+          "text": "Link text that is as meaningful as possible will aid users who want to choose from this list of links.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html"
+    },
+    {
+      "id": "heading-skip",
+      "severity": "warning",
+      "area": "structure",
+      "file": "examples/site-broken/signup.html",
+      "line": 12,
+      "column": 7,
+      "snippet": "<h3>",
+      "subject": "h3",
+      "message": "The h3 \"Your details\" comes after the h1 \"Create your account\" at line 10, so level 2 is skipped. A screen reader user who moves from heading to heading takes the gap for a missing section.",
+      "fix": "Use h2 here, or change the level of the heading before it; set the size of a heading with CSS, not with its level.",
+      "basis": [
+        {
+          "text": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+        },
+        {
+          "text": "When headings are clear and descriptive, users can find the information they seek more easily, and they can understand the relationships between different parts of the content more easily.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+    },
+    {
+      "id": "no-h1",
+      "severity": "warning",
+      "area": "structure",
+      "file": "examples/site-broken/product.html",
+      "line": 7,
+      "column": 1,
+      "snippet": "<body>",
+      "subject": "h1",
+      "message": "The page has no h1; its first heading is the h2 \"Ridge Runner trail shoe\" at line 9. Screen reader users jump to the h1 to find the main content and to learn what the page is about.",
+      "fix": "Mark the main heading of the page as h1, once, at the start of the main content.",
+      "basis": [
+        {
+          "text": "When headings are clear and descriptive, users can find the information they seek more easily, and they can understand the relationships between different parts of the content more easily.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html"
+        },
+        {
+          "text": "Having these structures and these relationships programmatically determined or available in text ensures that information important for comprehension will be perceivable to all.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html"
+    },
+    {
+      "id": "table-no-headers",
+      "severity": "warning",
+      "area": "structure",
+      "file": "examples/site-broken/product.html",
+      "line": 13,
+      "column": 5,
+      "snippet": "<table>",
+      "subject": "th",
+      "message": "The table has 3 rows of up to 3 cells and no th cell. A screen reader reads each cell without the column or row it belongs to, so \"42\" or \"In stock\" lose their meaning.",
+      "fix": "Mark the header row or column with th (with scope=\"col\" or scope=\"row\" when it helps). If the table only lays out the page, use CSS instead, or add role=\"presentation\".",
+      "basis": [
+        {
+          "text": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+        },
+        {
+          "text": "Having these structures and these relationships programmatically determined or available in text ensures that information important for comprehension will be perceivable to all.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+    },
+    {
+      "id": "several-h1",
+      "severity": "info",
+      "area": "structure",
+      "file": "examples/site-broken/index.html",
+      "line": 20,
+      "column": 5,
+      "snippet": "<h1>",
+      "subject": "h1",
+      "message": "The page has 2 h1s: \"Shoes for every path\" (line 17) and \"New this season\" (line 20). HTML allows it, but most pages read best with one h1 for the main heading.",
+      "fix": "Keep one h1 for the main heading of the page and make the others h2, unless each one starts a separate part of equal weight.",
+      "basis": [
+        {
+          "text": "When headings are clear and descriptive, users can find the information they seek more easily, and they can understand the relationships between different parts of the content more easily.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html"
+    },
+    {
+      "id": "duplicate-id",
+      "severity": "error",
+      "area": "ids",
+      "file": "examples/site-broken/signup.html",
+      "line": 19,
+      "column": 7,
+      "snippet": "<p id=\"hint\">",
+      "subject": "hint",
+      "message": "The id \"hint\" is used by 2 elements in this file: <p> at 17:7 and <p> at 19:7. Labels, aria attributes and links that point at this id reach only the first of them.",
+      "fix": "Give every element its own id, and update the for, aria-labelledby, aria-describedby or href that should point at the second one.",
+      "basis": [
+        {
+          "text": "When specified on HTML elements, the id attribute value must be unique amongst all the IDs in the element's tree and must contain at least one character.",
+          "section": "Global attributes",
+          "source": "https://html.spec.whatwg.org/multipage/dom.html#global-attributes"
+        },
+        {
+          "text": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+        }
+      ],
+      "source": "https://html.spec.whatwg.org/multipage/dom.html#global-attributes"
+    },
+    {
+      "id": "aria-reference-missing",
+      "severity": "error",
+      "area": "ids",
+      "file": "examples/site-broken/signup.html",
+      "line": 15,
+      "column": 7,
+      "snippet": "<label for=\"pass\">",
+      "subject": "for",
+      "message": "for on this <label> names the id \"pass\", which no element in the file has. The label is tied to no field.",
+      "fix": "Point for at the id of the element that is really there (ids are case-sensitive), or add the id to that element.",
+      "basis": [
+        {
+          "text": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+        },
+        {
+          "text": "Success Criterion 4.1.2 Name, Role, Value requires a programmatically determinable name for all user interface components.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+    },
+    {
+      "id": "aria-reference-missing",
+      "severity": "error",
+      "area": "ids",
+      "file": "examples/site-broken/signup.html",
+      "line": 16,
+      "column": 7,
+      "snippet": "<input type=\"password\" id=\"password\" name=\"password\" aria-describedby=\"pass-rules\">",
+      "subject": "aria-describedby",
+      "message": "aria-describedby on this <input type=\"password\"> names the id \"pass-rules\", which no element in the file has. The description it should give is not there.",
+      "fix": "Point aria-describedby at the id of the element that is really there (ids are case-sensitive), or add the id to that element.",
+      "basis": [
+        {
+          "text": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+        },
+        {
+          "text": "Success Criterion 4.1.2 Name, Role, Value requires a programmatically determinable name for all user interface components.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+    },
+    {
+      "id": "aria-hidden-focusable",
+      "severity": "error",
+      "area": "focus",
+      "file": "examples/site-broken/product.html",
+      "line": 27,
+      "column": 7,
+      "snippet": "<a href=\"product-blue.html\">",
+      "subject": "aria-hidden",
+      "message": "This <a href> takes keyboard focus, but it is inside <div> at 26:5, which has aria-hidden=\"true\". A keyboard user can tab to it while a screen reader says nothing about it, or reads something unrelated.",
+      "fix": "Remove aria-hidden from content that people can reach, or take the element out of the tab order with tabindex=\"-1\" (or the inert attribute on the hidden part) while it is hidden.",
+      "basis": [
+        {
+          "text": "Authors using aria-hidden to hide visible content from screen readers MUST ensure that identical or equivalent meaning and functionality is exposed to assistive technologies.",
+          "section": "aria-hidden state",
+          "source": "https://www.w3.org/TR/wai-aria-1.2/#aria-hidden"
+        },
+        {
+          "text": "Indicates whether the element is exposed to an accessibility API.",
+          "section": "aria-hidden state",
+          "source": "https://www.w3.org/TR/wai-aria-1.2/#aria-hidden"
+        }
+      ],
+      "source": "https://www.w3.org/TR/wai-aria-1.2/#aria-hidden"
+    },
+    {
+      "id": "positive-tabindex",
+      "severity": "warning",
+      "area": "focus",
+      "file": "examples/site-broken/signup.html",
+      "line": 20,
+      "column": 7,
+      "snippet": "<button type=\"submit\" tabindex=\"1\">",
+      "subject": "tabindex",
+      "message": "tabindex=\"1\" puts this <button> ahead of every element with tabindex 0 or none, so the Tab key jumps here first and then back, out of the order in which the page is read.",
+      "fix": "Use tabindex=\"0\" (or no tabindex on a link, button or field) and put the element where it belongs in the source order.",
+      "basis": [
+        {
+          "text": "If a web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability.",
+          "section": "Success Criterion (SC)",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html"
+        },
+        {
+          "text": "If no scripting or tabindex attributes are used, the navigation order is the order that components appear in the content stream.",
+          "section": "Intent",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html"
+        }
+      ],
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html"
+    }
+  ],
+  "notes": [],
+  "counts": {
+    "error": 13,
+    "warning": 8,
+    "info": 4
+  },
+  "gate": {
+    "failOn": "warning",
+    "pass": false,
+    "reason": "13 errors, 8 warnings"
+  }
+}
